@@ -1,19 +1,29 @@
 <%@ page import="com.insurance.Policy" %>
+<%@ page import="com.insurance.Claim" %>
 <html>
 <head>
-    <title>Insurance App - Dashboard</title>
+    <title>Insurance Dashboard</title>
 </head>
-<body>
-    <h1>Insured Assurance Java App</h1>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h1>Insured Assurance Portal</h1>
     <hr>
-    <h3>Active Policy Details:</h3>
+    
+    <h2>Policy Holder Info</h2>
     <%
-        // This is where we use your Java Class!
         Policy myPolicy = new Policy("INS-7788", "Gunjan Bhagwatkar", 1500.00);
     %>
-    <p style="color: green; font-weight: bold;">
-        <%= myPolicy.getDetails() %>
+    <p><strong>Status:</strong> <span style="color: green;">Active</span></p>
+    <p><strong>Details:</strong> <%= myPolicy.getDetails() %></p>
+
+    <hr>
+
+    <h2>Recent Claims</h2>
+    <%
+        Claim myClaim = new Claim("CLM-9901", 450.25);
+    %>
+    <p style="background-color: #f0f0f0; padding: 10px; border-left: 5px solid blue;">
+        <%= myClaim.getClaimSummary() %>
     </p>
-    <p>Premium Amount: $1500.00</p>
+
 </body>
 </html>
