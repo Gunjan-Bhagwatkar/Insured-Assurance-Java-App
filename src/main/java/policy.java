@@ -1,3 +1,4 @@
+package com.insurance;
 public class Policy {
     private String policyNumber;
     private String holderName;
