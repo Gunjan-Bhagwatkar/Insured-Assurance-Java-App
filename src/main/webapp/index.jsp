@@ -10,7 +10,7 @@
     
     <h2>Policy Holder Info</h2>
     <%
-        Policy myPolicy = new Policy("INS-7788", "Gunjan Bhagwatkar", 1500.00);
+        Policy myPolicy = new Policy("INS-7788", "Gunjan Insurance Co", 1500.00);
     %>
     <p><strong>Status:</strong> <span style="color: green;">Active</span></p>
     <p><strong>Details:</strong> <%= myPolicy.getDetails() %></p>
@@ -19,7 +19,7 @@
 
     <h2>Recent Claims</h2>
     <%
-        Claim myClaim = new Claim("CLM-9901", 450.25);
+        Claim myClaim = new Claim("CLM-9901", 1200.00);
     %>
     <p style="background-color: #f0f0f0; padding: 10px; border-left: 5px solid blue;">
         <%= myClaim.getClaimSummary() %>
